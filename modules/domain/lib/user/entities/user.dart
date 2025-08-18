@@ -1,6 +1,16 @@
 import 'package:domain/domain.dart';
 
 class User {
+  static const String errorMessage =
+      "The entity have a attribute empty or null ";
+
+  final String id;
+  final String name;
+  final String email;
+  final String phone;
+  final String departmentBirth;
+  final String cityBirth;
+  final String password;
   User({
     required this.id,
     required this.name,
@@ -20,15 +30,4 @@ class User {
       throw BusinessException(errorMessage);
     }
   }
-
-  static const String errorMessage =
-      "The entity have a attribute empty or null ";
-
-  final String id;
-  final String name;
-  final String email;
-  final String phone;
-  final String departmentBirth;
-  final String cityBirth;
-  final String password;
 }

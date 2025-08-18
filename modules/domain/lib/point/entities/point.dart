@@ -1,6 +1,9 @@
 import 'package:domain/domain.dart';
 
 class Point {
+  static const String errorMessage =
+      "The entity have a attribute less than zero, empty or null";
+
   String id;
   Invoice purchase;
   double totalCash;
@@ -16,7 +19,4 @@ class Point {
       throw BusinessException(errorMessage);
     }
   }
-
-  static const String errorMessage =
-      "The entity have a attribute less than zero, empty or null";
 }
