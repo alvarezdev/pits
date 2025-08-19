@@ -15,7 +15,7 @@ class Shop {
   final String department;
   final String municipality;
   final String logoPath;
-  final List<ProductOrService> productOrServiceList;
+  final List<({String id, String name})> productOrServiceList;
 
   Shop({
     required this.id,
