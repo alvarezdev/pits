@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
-import 'package:infrastructure/core/errors/exceptions.dart';
-import 'package:infrastructure/core/errors/extensions/dio_exception_extension.dart';
-import 'package:infrastructure/core/network/network_info.dart';
+import 'package:infrastructure/core/network/connection_checker.dart';
+import 'package:infrastructure/core/network/errors/exceptions.dart';
+import 'package:infrastructure/core/network/errors/extensions/dio_exception_extension.dart';
 
 class ApiClient {
   final Dio _dio;
-  final NetworkInfo _networkInfo;
+  final ConnectionChecker _connectionChecker;
 
   ApiClient({
     required Dio dio,
-    required NetworkInfo networkInfo,
+    required ConnectionChecker connectionChecker,
   })  : _dio = dio,
-        _networkInfo = networkInfo;
+        _connectionChecker = connectionChecker;
 
   Future<Response<T>> get<T>(String endpoint) async {
     return _request<T>(() => _dio.get(endpoint));
@@ -31,7 +31,7 @@ class ApiClient {
 
   Future<Response<T>> _request<T>(
       Future<Response<T>> Function() request) async {
-    if (!await _networkInfo.isConnected) {
+    if (!await _connectionChecker.hasConnection) {
       throw NoConnectionException();
     }
     try {

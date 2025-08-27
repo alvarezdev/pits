@@ -21,18 +21,6 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
-        },
-        {
-            "name": "domain",
-            "cwd": "modules/domain",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "infrastructure",
-            "cwd": "modules/infrastructure",
-            "request": "launch",
-            "type": "dart"
         }
     ]
 }

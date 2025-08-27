@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:infrastructure/core/constants/app_constants.dart';
 import 'package:infrastructure/core/constants/public_api_endpoints_constants.dart';
-import 'package:infrastructure/core/errors/exceptions.dart';
+import 'package:infrastructure/core/network/errors/exceptions.dart';
 
 class AuthInterceptor extends QueuedInterceptor {
   final FlutterSecureStorage secureStorage;
