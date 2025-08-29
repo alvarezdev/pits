@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:infrastructure/core/network/api_client.dart';
-import 'package:infrastructure/core/network/connection_checker.dart';
-import 'package:infrastructure/core/network/dio_factory.dart';
+import 'package:infrastructure/core/network/client/api_client.dart';
+import 'package:infrastructure/core/network/client/connection_checker.dart';
+import 'package:infrastructure/core/network/client/dio_factory.dart';
 import 'package:infrastructure/core/network/interceptors/auth_interceptor.dart';
 import 'package:injectable/injectable.dart';
 
