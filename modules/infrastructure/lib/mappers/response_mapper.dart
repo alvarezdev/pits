@@ -16,11 +16,6 @@ class ResponseMapper {
   }
 
   List<T> fromJsonList<T>(List<dynamic> jsonList) {
-    final factory = _factories[T] as FromJson<T>?;
-    if (factory == null) {
-      throw Exception("No factory registered for type $T");
-    }
-
     return jsonList.map((e) => fromJson<T>(e as Map<String, dynamic>)).toList();
   }
 }
