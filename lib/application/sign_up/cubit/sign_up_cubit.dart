@@ -2,21 +2,21 @@ import 'package:domain/domain.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 
-part 'department_state.dart';
+part 'sign_up_state.dart';
 
 @injectable
-class DepartmentCubit extends Cubit<DepartmentState> {
+class SignUpCubit extends Cubit<SignUpState> {
   final IntegrationExternalRepository _repository;
 
-  DepartmentCubit(this._repository) : super(DepartmentInitial());
+  SignUpCubit(this._repository) : super(SignUpInitial());
 
   Future<void> loadDepartments() async {
-    emit(DepartmentLoading());
+    emit(SignUpLoading());
     try {
       final departments = await _repository.getDepartments();
-      emit(DepartmentLoaded(departments));
+      emit(SignUpLoaded(departments));
     } catch (e) {
-      emit(DepartmentError("Failed to load departments"));
+      emit(SignUpError("Failed to load departments"));
     }
   }
 }

@@ -14,7 +14,8 @@ import 'package:domain/domain.module.dart' as _i941;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:infrastructure/infrastructure.module.dart' as _i460;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:pits/application/department/bloc/department_cubit.dart' as _i988;
+import 'package:pits/application/sign_up/cubit/sign_up_cubit.dart'
+    as _i236;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -27,8 +28,8 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i988.DepartmentCubit>(
-        () => _i988.DepartmentCubit(gh<_i494.IntegrationExternalRepository>()));
+    gh.factory<_i236.SignUpCubit>(
+        () => _i236.SignUpCubit(gh<_i494.IntegrationExternalRepository>()));
     await _i460.InfrastructurePackageModule().init(gh);
     await _i941.DomainPackageModule().init(gh);
     return this;
