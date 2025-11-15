@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appTitle": "Pits",
+  "@appTitle": {
+    "description": "Title of the application"
+  },
+  "singUpScreenTitle": "Sing Up",
+  "@singUpScreenTitle": {
+    "description": "Title of the sing up screen "
+  }
+}

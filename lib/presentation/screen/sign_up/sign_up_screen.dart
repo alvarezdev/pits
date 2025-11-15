@@ -11,11 +11,11 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Sign Up'),
       ),
       body: SignUpConnector(
         builder: (context, viewModel) => SignUpWidget(
+            onRegisterUser: viewModel.onRegisterUser,
             departments: viewModel.departments,
           ),
       ),

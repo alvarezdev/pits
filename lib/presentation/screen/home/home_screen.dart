@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(Dimensions.d30),
           child: Column(
             children: [
-              TextButton(
+              ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(
                     context,

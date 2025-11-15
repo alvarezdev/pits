@@ -1,6 +1,6 @@
 class AppConstants {
   //BaseUrl
-  static const String baseUrl = 'https://api.tuapp.com';
+  static const String baseUrl = 'http://localhost:8080/api/';
 
   // Storage keys
   static const String accessTokenKey = 'accessToken';

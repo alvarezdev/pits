@@ -1,0 +1,11 @@
+{
+  "@@locale": "es",
+  "appTitle": "Pits",
+  "@appTitle": {
+    "description": "Titulo de la aplicacion"
+  },
+  "singUpScreenTitle": "CREA TU PERFIL",
+  "@singUpScreenTitle": {
+    "description": "Titulo de la pantalla de registro"
+  }
+}
